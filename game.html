@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html>
+	<head>
+
+
+	<link href="CSS/colors.css" rel="stylesheet" type="text/css"> 
+	<link href="CSS/firstcolor.css" rel="stylesheet" type="text/css"> 
+	<!-- Button action and creation -->
+		<script type="text/javascript" src="JS/butt.js">
+		</script>
+ 	<!-- list of 3 character words -->
+		<script type="text/javascript" src="JS/words3.js">
+		</script>
+ 	<!-- list of 4 character words -->
+		<script type="text/javascript" src="JS/words4.js">
+		</script>
+
+	<script>
+	// timer script 
+	var myVar=setInterval(function(){myTimer()},1000);
+
+	var t=120;
+	function myTimer()
+	{
+	document.getElementById("sec").innerHTML=t;
+	t=t-1;
+	if(t==0)
+		{
+		alert("your score is"+document.getElementById("pts").innerHTML);
+		window.location.href="index.html";
+		t=120;
+		}
+	}
+	
+	
+</script>
+</head>
+	<body class="bgc" onload="score(0)">
+	<div align="center">
+	<!-- here we will have score and time -->
+		<section class="tex">
+			TIME:
+			<b id="sec"></b>
+			SEC
+			POINTS:
+			<b id="pts">0</b>
+
+		</section><br />
+
+	<!-- it is the text box of the words we type -->
+		<input type="text" name="box" id="tb">
+	<!-- buttons creation in table format -->
+		<table row=8 cols=8 border=0px>
+			<script type="text/javascript">
+				for(var i=0;i<8;i++)
+					{	
+				Math.random();
+				document.write(" <tr>");
+				fun(i);
+				document.write("</tr>");
+					}
+			</script>
+		</table>
+	<!-- 3 buttons area -->
+		<button class="extbu" onclick="era()">Backspace</button>
+		<button class="extbu" onclick="cle()">Clear</button><br />
+		<button class="extbu" value="Enter" onclick="word()"> Submit</button>
+	</div>
+	</body>
+</html>
