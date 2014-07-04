@@ -1,0 +1,13 @@
+{
+  "name": "words",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "priya",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}
