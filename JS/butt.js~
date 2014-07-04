@@ -1,0 +1,61 @@
+var score;
+// this is for creating the 8 buttons in a row
+var k=0;
+function fun(num)
+{
+for(var i=0;i<8;i++)
+	{
+Math.random();
+document.write("<td> <input type=" + ' button ' + " class= " + 'but' + "  id= " + k + " value=" + String.fromCharCode(65 + (90 - 65) *Math.random()) +" onclick=" + 'display(id)' + "> </td>");
+++k;
+	}
+}
+
+// this is for showing the text in a text box
+var s="";
+function display(ids)
+{
+var z=document.getElementById(ids).value;
+s=s+z;
+var tex=document.getElementById('tb');
+tex.value=tex.value+z;
+
+}
+
+// this is for clearing all the values from the text box
+function cle()
+{
+var tex=document.getElementById('tb');
+tex.value="";
+}
+
+// this is for clearing last character from the text box
+function era()
+{
+var tex=document.getElementById('tb');
+s=tex.value;
+
+s = s.substring(0, s.length - 1);
+tex.value=s;
+}
+
+
+
+function word()
+{
+var tex=document.getElementById('tb');
+s=tex.value;
+len=s.length;
+switch(len)
+{
+case 3:
+ word3(s);
+break;
+case 4:
+word4(s);
+break;
+
+}
+s="";
+}
+
